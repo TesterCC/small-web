@@ -11,6 +11,17 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [在线视频](https://www.bilibili.com/video/BV1Hz4y1j7Mw/?p=7) 0:50
 - [讲师笔记](https://gitee.com/zhengqingya/smallboot/tree/master/small-web/doc)
 
+## [课前基础-前端Vue3一小时快速入门学习](https://www.bilibili.com/video/BV1ap4y177eY?p=3) todo
+
+方便快速学习Vue3语法
+
+Vue2将于2023年12月31日停止维护。
+
+### Vue.js API风格
+
+- 选项式，vue2常用，特征： <script> export default
+- 组合式，vue3常用，特征：可用setup语法糖，<script setup> import {ref} from 'vue'
+
 P.S.: 5月准备rk而且依旧要支持项目，所以可能这个课程跟进不会那么及时（先把后端gin和mongo的课程学完，然后是看是学这个，还是python的asyncio那本书同时学）
 
 这个项目虽然简单，但是比较符合正式项目构建标准。
