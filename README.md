@@ -8,9 +8,10 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## [完整课程] Vue3+Vite4+Pinia+ElementPlus从0-1 web项目搭建 todo
 
-- [在线视频](https://www.bilibili.com/video/BV1Hz4y1j7Mw/?p=6) 0:50
+- [在线视频](https://www.bilibili.com/video/BV1Hz4y1j7Mw/?p=7) 0:50
+- [讲师笔记](https://gitee.com/zhengqingya/smallboot/tree/master/small-web/doc)
 
-P.S.: 10月要准备rk而且依旧要支持项目，所以可能这个课程跟进不会那么及时（先把后端gin和mongo的课程学完，然后是看是学这个，还是python的asyncio那本书同时学）
+P.S.: 5月准备rk而且依旧要支持项目，所以可能这个课程跟进不会那么及时（先把后端gin和mongo的课程学完，然后是看是学这个，还是python的asyncio那本书同时学）
 
 这个项目虽然简单，但是比较符合正式项目构建标准。
 
@@ -39,7 +40,7 @@ Element-plus
 官方文档：https://cn.vite.js.dev/guide/
 
 ```shell
-npm create vite@latest small-web -- --template vue --registry=https://registry.npm.taobao.org
+npm create vite@latest small-web -- --template vue --registry=https://registry.npmjs.org/
 
 Scaffolding project in D:\git_workspace\ws_vuejs\small-web...
 
@@ -53,7 +54,7 @@ Done. Now run:
 ```shell
 项目初始化：
 cd small-web
-npm install --registry=https://registry.npm.taobao.org
+npm install --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
@@ -69,8 +70,8 @@ npm run dev
 
 ```shell
 cd small-web
-npm install --save-dev --save-exact prettier --registry=https://registry.npm.taobao.org
-npm install eslint --save-dev --registry=https://registry.npm.taobao.org
+npm install --save-dev --save-exact prettier --registry=https://registry.npmjs.org/
+npm install eslint --save-dev --registry=https://registry.npmjs.org/
 ```
 
 3.配置prettier
@@ -119,10 +120,95 @@ npm install eslint --save-dev --registry=https://registry.npm.taobao.org
 
 3.然后设置vscode settings，勾选Format on Save
 
-右键选择默认的格式化插件
+多个插件的话，可以单击右键选择Format Document With -> 选择你要使用的格式化插件
+
+可以把默认的配置为prettier
 
 ### ESLint安装
 
+http://zh-hans.eslint.org
+
 ```
-npm install --D eslint prettier eslint-plugin-vue eslint-config-prettier eslint-plugin-prettier --registry=https://registry.npm.taobao.org
+npm install --D eslint prettier eslint-plugin-vue eslint-config-prettier eslint-plugin-prettier --registry=https://registry.npmjs.org/
 ```
+
+#### 规则配置
+
+规则中文解释 http://eslint.cn/docs/rules/
+
+rules: {
+'规则名': '规则值'
+// eg:
+'no-undef': 'off'
+}
+
+#### 规则值
+
+    "off"或者0 => 关闭检测规则
+    "warn"或者1 => 打开并把打开的检测规则作为警告（不影响退出代码）
+    "error"或者2 => 打开并把检测规则作为一个错误（退出代码触发时为1）
+
+#### .eslintignore 忽略检查
+
+```
+node_modules
+*.md
+.vscode
+.idea
+dist
+public
+*.js
+*.cjs
+```
+
+#### 配置vite项目启动时检查
+
+```
+cnpm install -D vite-plugin-eslint
+```
+
+or
+
+```
+npm install --D vite-plugin-eslint --registry=https://registry.npmjs.org/
+or
+npm install --D vite-plugin-eslint
+```
+
+PS: https://registry.npmjs.org/可能已经过期，镜像如果过期，就换个镜像。
+
+```
+npm config list
+
+npm config set registry https://registry.npmjs.org
+
+npm config list
+```
+
+vite.config.js
+
+```javascript
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+
+import eslint from "vite-plugin-eslint";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    eslint({ lintOnStart: true, cache: false }), // 项目运行时进行eslint检查
+  ],
+});
+```
+
+#### VScode插件Extensions搜eslint，安装Microsoft插件
+
+四、检验
+
+    tips: 如果vscode中没有效果，可以尝试重启vscode看看。
+
+VScode快捷键
+
+- Alt + F8 查看问题
+- Ctrl + . 快速修复
