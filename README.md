@@ -8,8 +8,25 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## [完整课程] Vue3+Vite4+Pinia+ElementPlus从0-1 web项目搭建 todo
 
-- [在线视频](https://www.bilibili.com/video/BV1Hz4y1j7Mw/?p=7) 0:50
+### 学习进度
+
+- [在线视频](https://www.bilibili.com/video/BV1Hz4y1j7Mw/?p=7) 3:20
 - [讲师笔记](https://gitee.com/zhengqingya/smallboot/tree/master/small-web/doc)
+
+```
+Vue3+Vite4+Pinia+ElementPlus  从0-1 web项目搭建
+笔记文档：https://gitee.com/zhengqingya/java-developer-document
+
+项目源码：https://gitee.com/zhengqingya/smallboot
+
+- 前端Vue3一小时快速入门学习（包含Vue3语法+setup写法等）：https://www.bilibili.com/video/BV1ap4y177eY
+
+- Vue3+Vite4+Pinia+ElementPlus从0到1 web项目搭建：https://www.bilibili.com/video/BV1Hz4y1j7Mw
+
+- Vue3+Vite4+Pinia+uni-app小程序从0-1项目搭建（这个优先级降低，有空再学）：https://www.bilibili.com/video/BV1up4y1P73i
+
+视频只详细介绍了前端代码的编写，后端代码或者自己实现，或者就智能直接用java springboot的代码
+```
 
 ## [课前基础-前端Vue3一小时快速入门学习](https://www.bilibili.com/video/BV1ap4y177eY?p=3) todo
 
